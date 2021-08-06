@@ -14,7 +14,7 @@ interpolation allows you to get values for any value in between the actual data 
 The equation for linear interpolation is
 
 ```c++
-y = y0 + (y1-y0)/(x1-x0) * (x-x0);
+y = y1 + (y2-y1)/(x2-x1) * (x-x1);
 //  ^    [    slope    ]   [    ]
 //  |                        ^-how far to the right is x from x0? 
 //  y offset
@@ -39,7 +39,7 @@ in `src/linear_interpolation.hpp`
 
 ```
 template <typename T>
-T linear_interpolation(T const x0, T const x1, T const y0, T const y1, T const x)
+T linear_interpolation(T const x1, T const x2, T const y1, T const y2, T const x)
 ```
 
 The tests in `tests/linear_interpolation_input_range_tests.cpp` and `tests/linear_interpolation_output_values_tests.cpp`
@@ -47,12 +47,12 @@ will help you with the implementation.
 
 ### Boundary checks
 
-As a first step, ensure that only values in the range `[x0, x1]` will yield a result. This Kata will not deal with
+As a first step, ensure that only values in the range `[x1, x2]` will yield a result. This Kata will not deal with
 extrapolation. The expectation is that a value outside the range will result in an invalid_argument exception.
 
 * Implement boundary value checks in the implementation so that the tests
   in `tests/linear_interpolation_input_range_tests.cpp` pass.
-* Also make sure that an exception is raised when `x0` and `x1` are not correctly ordered.
+* Also make sure that an exception is raised when `x1` and `x2` are not correctly ordered.
 
 ### The simple case: no interpolation needed
 

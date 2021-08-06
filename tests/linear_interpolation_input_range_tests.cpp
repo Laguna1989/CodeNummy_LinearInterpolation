@@ -10,7 +10,7 @@ class LinearInterpolationBoundaryInvalidValuesTestFixture
 TEST_P(LinearInterpolationBoundaryInvalidValuesTestFixture, ValueOutsideXRangeThrowsException)
 {
     double const x = GetParam();
-    ASSERT_THROW(linear_interpolation(x0, x1, y0, y1, x), std::invalid_argument);
+    ASSERT_THROW(linear_interpolation(x1, x2, y1, y2, x), std::invalid_argument);
 }
 
 INSTANTIATE_TEST_SUITE_P(LinearInterpolationBoundaryTest,
@@ -30,7 +30,7 @@ class LinearInterpolationBoundaryValidValuesTestFixture : public LinearInterpola
 TEST_P(LinearInterpolationBoundaryValidValuesTestFixture, ValueInsideXRangeThrowsNoExeption)
 {
     double const x = GetParam();
-    ASSERT_NO_THROW(linear_interpolation(x0, x1, y0, y1, x));
+    ASSERT_NO_THROW(linear_interpolation(x1, x2, y1, y2, x));
 }
 
 INSTANTIATE_TEST_SUITE_P(LinearInterpolationBoundaryValidValuesTest,

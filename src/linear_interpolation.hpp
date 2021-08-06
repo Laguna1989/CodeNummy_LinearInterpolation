@@ -4,23 +4,23 @@
 #include <stdexcept>
 
 template <typename Tx, typename Ty>
-Ty linear_interpolation(Tx const x0, Tx const x1, Ty const y0, Ty const y1, Tx const x)
+Ty linear_interpolation(Tx const x1, Tx const x2, Ty const y1, Ty const y2, Tx const x)
 {
-    if (x0 > x1)
+    if (x1 > x2)
     {
         throw std::invalid_argument{"x values are not ordered"};
     }
-    if (x < x0 || x > x1) {
+    if (x < x1 || x > x2) {
         throw std::invalid_argument { "x range outside range." };
-    }
-    if (x == x0) {
-        return y0;
     }
     if (x == x1) {
         return y1;
     }
+    if (x == x2) {
+        return y2;
+    }
 
-    return y0 + (y1-y0)/(x1-x0) *(x-x0);
+    return y1 + (y2 - y1)/(x2 - x1) *(x- x1);
 
     // fake impl
     return 42.0;

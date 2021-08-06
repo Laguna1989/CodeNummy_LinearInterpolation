@@ -7,14 +7,14 @@ class LinearInterpolationBoundaryOutputTest : public LinearInterpolationTestCons
                                               public ::testing::Test {
 };
 
-TEST_F(LinearInterpolationBoundaryOutputTest, X0ReturnsY0)
-{
-    ASSERT_EQ(y0, linear_interpolation(x0, x1, y0, y1, x0));
-}
-
 TEST_F(LinearInterpolationBoundaryOutputTest, X1ReturnsY1)
 {
-    ASSERT_EQ(y1, linear_interpolation(x0, x1, y0, y1, x1));
+    ASSERT_EQ(y1, linear_interpolation(x1, x2, y1, y2, x1));
+}
+
+TEST_F(LinearInterpolationBoundaryOutputTest, X2ReturnsY2)
+{
+    ASSERT_EQ(y2, linear_interpolation(x1, x2, y1, y2, x2));
 }
 
 class LinearInterpolationOutputTestFixture
@@ -30,7 +30,7 @@ TEST_P(LinearInterpolationOutputTestFixture, ExpectedValueReturned)
 
     ASSERT_DOUBLE_EQ(expected_y,
         linear_interpolation(
-            test_constants.x0, test_constants.x1, test_constants.y0, test_constants.y1, x));
+            test_constants.x1, test_constants.x2, test_constants.y1, test_constants.y2, x));
 }
 
 INSTANTIATE_TEST_SUITE_P(LinearInterpolationIdOutputTest, LinearInterpolationOutputTestFixture,
