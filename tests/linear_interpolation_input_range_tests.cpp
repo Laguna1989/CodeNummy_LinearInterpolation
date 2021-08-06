@@ -38,8 +38,7 @@ INSTANTIATE_TEST_SUITE_P(LinearInterpolationBoundaryValidValuesTest,
     ::testing::Values(0.1, 0.5, 0.9, std::numeric_limits<double>::epsilon(),
         std::numeric_limits<double>::min(), 1.0 - std::numeric_limits<double>::epsilon()));
 
-
 TEST(LinearInterpolationXORdering, IncorrectXOrderingThrowsException)
 {
-    ASSERT_THROW(linear_interpolation(1.0, 0.0, 1.0, 0.0, 0.5) , std::invalid_argument);
+    ASSERT_THROW(linear_interpolation(1.0, 0.0, 1.0, 0.0, 0.5), std::invalid_argument);
 }

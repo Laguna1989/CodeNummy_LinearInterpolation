@@ -83,6 +83,7 @@ INSTANTIATE_TEST_SUITE_P(LinearInterpolationSlope2OffsetOutputTest,
         std::make_tuple(LinearInterpolationTestConstants { 0.0, 1.0, 1.0, 3.0 }, 0.8, 2.6),
         std::make_tuple(LinearInterpolationTestConstants { 0.0, 1.0, 1.0, 3.0 }, 0.9, 2.8)));
 
-INSTANTIATE_TEST_SUITE_P(LinearInterpolationComplexOffsetOutputTest, LinearInterpolationOutputTestFixture,
-                         ::testing::Values(
-                             std::make_tuple(LinearInterpolationTestConstants { -2.0, 2.0, 5.0, 0.0 }, 0.0 , 2.5)));
+INSTANTIATE_TEST_SUITE_P(LinearInterpolationComplexOffsetOutputTest,
+    LinearInterpolationOutputTestFixture,
+    ::testing::Values(
+        std::make_tuple(LinearInterpolationTestConstants { -2.0, 2.0, 5.0, 0.0 }, 0.0, 2.5)));
