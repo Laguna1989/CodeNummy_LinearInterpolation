@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="08_equation_solved.svg">
+   sodipodi:docname="09_equation_solved.svg"
+   inkscape:export-filename="C:\projects\CodeKata_Numerics_LinearInterpolation\visuals\09_equation_solved.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2">
     <marker
@@ -57,7 +60,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="247.26656"
+     inkscape:cx="169.23085"
      inkscape:cy="204.67009"
      inkscape:document-units="mm"
      inkscape:current-layer="layer4"
@@ -79,7 +82,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

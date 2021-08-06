@@ -9,7 +9,7 @@ This is a Code Kata about linear interpolation.
 Linear interpolation is a useful method, e.g. for data analysis. When you have a set of data points, linear
 interpolation allows you to get values for any value in between the actual data points.
 
-TODO Create picture in inkscape
+![ani](https://user-images.githubusercontent.com/2394228/128511764-52235490-5a46-45e9-8e35-43ec5995c87d.gif)
 
 The equation for linear interpolation is
 
