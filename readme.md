@@ -35,28 +35,27 @@ Drawbacks:
 ## Implementation
 
 Let's start with implementing the linear interpolation function. The function signature is given
-in `src/linear_interpolation.hpp`
+in `src/linear_interpolation`
 
 ```
-template <typename T>
-T linear_interpolation(T const x1, T const x2, T const y1, T const y2, T const x)
+linear_interpolation(x1, x2, y1, y2, x)
 ```
 
-The tests in `tests/linear_interpolation_input_range_tests.cpp` and `tests/linear_interpolation_output_values_tests.cpp`
+The tests in `tests/linear_interpolation_input_range_test` and `tests/linear_interpolation_output_values_test`
 will help you with the implementation.
 
 ### Boundary checks
 
 As a first step, ensure that only values in the range `[x1, x2]` will yield a result. This Kata will not deal with
-extrapolation. The expectation is that a value outside the range will result in an invalid_argument exception.
+extrapolation. The expectation is that a value outside the range will result in an exception.
 
 * Implement boundary value checks in the implementation so that the tests
-  in `tests/linear_interpolation_input_range_tests.cpp` pass.
+  in `tests/linear_interpolation_input_range_test` pass.
 * Also make sure that an exception is raised when `x1` and `x2` are not correctly ordered.
 
 ### The simple case: no interpolation needed
 
-As a next corner case, take a look at the tests in `tests/linear_interpolation_output_values_tests.cpp`.
+As a next corner case, take a look at the tests in `tests/linear_interpolation_output_values_test`.
 
 The first two tests in this file will make sure that for x values already known, the respective y value will be
 returned.
